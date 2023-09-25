@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+
+## Troubleshooting
+- `Error: Cannot find module 'stream/web'`
+  - Your version of Node is too old.
+  - `nvm ls-remote --lts` to see the name of the latest available version
+  - `nvm install <name of the latest version>`
+
+- `Error: [Error: ENOENT: no such file or directory, open '<project dir>/.next/BUILD_ID']`
+  - This error showed up when I ran `npm start` instead of `npm run dev` which is indicated above
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
