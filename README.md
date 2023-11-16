@@ -20,6 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [Tone.js in React project](https://github.com/Jupaolivera/BasicSynth/blob/master/src/App.js)
 
+# Data sources
+- [freesound.org](https://freesound.org/docs/api/)
+- [Random Image API](https://api-ninjas.com/api/randomimage)
+- [JSON placeholder](https://jsonplaceholder.typicode.com/)
+
 ## Troubleshooting
 - `Error: Cannot find module 'stream/web'`
   - Your version of Node is too old.
