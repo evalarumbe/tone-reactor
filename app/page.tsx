@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import TonePlay from './components/TonePlay';
+import Sample from './components/Sample';
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <Link href="about">About</Link>
         <TonePlay />
+      </div>
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+        <Sample />
       </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
