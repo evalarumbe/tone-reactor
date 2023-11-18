@@ -4,13 +4,14 @@ import { NextRequest, NextResponse } from 'next/server';
 // i want a client component to programmatically call this endpoint
 export async function GET(request: NextRequest) {
   // fetch a blob from external api
+
   const res = await fetch(
     'https://api.api-ninjas.com/v1/randomimage?category=abstract',
     {
-      headers: {
+      headers: { // TODO: TS error: Handle the undefined case: https://stackoverflow.com/questions/65296563/type-undefined-is-not-assignable-to-type-string-string
         'X-Api-Key': process.env.RANDOMIMAGE_API_KEY,
-        'Accept': 'image/jpg'
-      },
+        'Accept': 'image/jpg',
+      }
     }
   );
   const imageBlob = await res.blob();

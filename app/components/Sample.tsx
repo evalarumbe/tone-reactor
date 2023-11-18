@@ -1,9 +1,9 @@
 'use client'
 
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
-async function Sample(props) {
+function Sample(props) {
   // const res = await fetch('', {}); // my endpoint
   
   return (
