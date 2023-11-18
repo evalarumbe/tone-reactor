@@ -19,8 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Required env variables
 
 - RANDOMIMAGE_API_KEY [Register for a free one at api-ninjas.com](https://api-ninjas.com/register)
-- FREESOUND_CLIENT_ID [Register for a free one at freesound.org](https://freesound.org/apiv2/apply)
-- FREESOUND_CLIENT_SECRET [Register for a free one at freesound.org](https://freesound.org/apiv2/apply)
+- FREESOUND_API_KEY [Register for a free one at freesound.org](https://freesound.org/apiv2/apply) and see their [token authentication docs](https://freesound.org/docs/api/authentication.html#token-authentication).
 
 ## Inspiration
 

@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
 
   // return the blob to the caller in the response
   const response = new NextResponse(imageBlob, {
-    status: 
+    status: 200
   });
   console.log('====================================');
   console.log('REQUEST');
