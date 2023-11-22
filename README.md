@@ -1,6 +1,6 @@
 # Tone Reactor
 
-![image](https://github.com/evalarumbe/tone-reactor/assets/19648700/31a0c581-1e0e-412a-90f1-64bc22c74718)
+![image](https://github.com/evalarumbe/tone-reactor/assets/19648700/de5b3c2a-108e-4f2f-b4d7-6f9b292c8d75)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
