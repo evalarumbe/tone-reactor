@@ -4,9 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'github.com',
+        hostname: 'user-images.githubusercontent.com',
         port: '',
-        pathname: '/evalarumbe/**',
+        pathname: '/19648700/**',
       },
     ],
   },
