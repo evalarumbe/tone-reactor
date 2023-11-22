@@ -2,8 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import TonePlay from './components/TonePlay';
 import Sample from './components/Sample';
-import SmolSample from './components/SmolSample';
-import RandomImage from './components/RandomImage';
 
 export default function Home() {
   return (
