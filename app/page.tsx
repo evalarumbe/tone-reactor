@@ -5,8 +5,11 @@ import TonePlay from './components/TonePlay';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <Link className="text-lg font-bold hover:text-gray-400" href="about">About</Link>
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex pb-3">
+        <h1 className="self-start text-xl font-bold">Tone Reactor</h1>
+      </div>
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex pb-2">
+        <Link className="text-lg font-bold hover:text-gray-600" href="about">About</Link>
         <TonePlay />
       </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols- lg:text-left h-40">
