@@ -1,18 +1,45 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-function Sample(props) {
-  // const res = await fetch('', {}); // my endpoint
-  
+async function getImageSrc() {
+  // fetch the image blob from internal api route
+  const res = await fetch(`${window.location.origin}/random-image`, {
+    headers: {
+      'Accept-type': 'image/jpeg',
+    }
+  });
+  const imageBlob = await res.blob();
+  const imageObjectURL = await URL.createObjectURL(imageBlob);
+  const fullString = await imageObjectURL;
+  const truncatedString = await fullString.slice(5);
+  console.log('await')
+  console.log(typeof (await imageObjectURL))
+  console.log(imageObjectURL)
+  return await imageObjectURL;
+}
+
+function Sample() {
+  const [imageSrc, setImageSrc] = useState(''); // TODO: fallback image
+  useEffect(() => {
+    (async function fetchRandomImage() {
+      setImageSrc(await getImageSrc());
+    })();
+  },[])
+
+  console.log('====================================');
+  console.log(imageSrc); // blob:http://localhost:3000/ea4ed1dc-ca1f-4f36-b6b5-a5ad28254166
+  console.log('====================================');
+
   return (
-    <Image 
-      className='lg:h-full'
-      src="https://user-images.githubusercontent.com/19648700/284762217-de5b3c2a-108e-4f2f-b4d7-6f9b292c8d75.png"
-      height={902}
-      width={2096}
-      alt="Design spec showing four interactivity states of this app"
+    <Image
+      priority
+      className='lg:h-full aspect-auto'
+      src={imageSrc}
+      width={400}
+      height={400}
+      alt=""
     />
   );
 }
