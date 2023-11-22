@@ -29,6 +29,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Inspiration
 
 - [Tone.js in React project](https://github.com/Jupaolivera/BasicSynth/blob/master/src/App.js)
+- [Repos using Freesound](https://github.com/search?q=freesound.org&type=repositories)
+- [NextJS App router API Data Fetching in Server & Client Components!](https://www.youtube.com/watch?v=b9IWYqhbHzg&ab_channel=Weibenfalk)
+  - Might I want to extract my own fetch abstraction with error handling? [4:09](https://youtu.be/b9IWYqhbHzg?si=eLVSMW-YdjWbVTNU&t=249)
+  - Could I make better use of ts.config? [4:56](https://youtu.be/b9IWYqhbHzg?si=1FWM9O3hOYnUMDJa&t=296)
 
 # Data sources
 - [freesound.org](https://freesound.org/docs/api/)
