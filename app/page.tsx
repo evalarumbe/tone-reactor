@@ -14,9 +14,11 @@ export default function Home() {
         <TonePlay />
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
-        <h2 className="pb-2">Can we get a random image to show up here?</h2>
+        <h2 className="pb-2">Can we get 3 random images to show up here?</h2>
       </div>
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left grid-cols-2 min-h-40 pb-3">
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left grid-cols-3 min-h-40 pb-3">
+        <Sample />
+        <Sample />
         <Sample />
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
