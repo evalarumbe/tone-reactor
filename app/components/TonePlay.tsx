@@ -2,7 +2,7 @@
 
 import React from 'react';
 import * as Tone from 'tone';
-import { makeSynth } from '../lib/tr-tone';
+import { makeSynth } from '../lib/tone';
 
 export default function TonePlay() {
   
