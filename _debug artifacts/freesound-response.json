@@ -1,0 +1,268 @@
+// GET /apiv2/search/text/?&query=music&filter=tag:guitar&weights=&page=2
+// HTTP 200 OK
+// Allow: GET, HEAD, OPTIONS
+// Content-Type: application/json
+// Vary: Accept
+
+{
+    "count": 3111,
+    "previous": "https://freesound.org/apiv2/search/text/?&query=music&filter=tag:guitar&weights=&page=1",
+    "next": "https://freesound.org/apiv2/search/text/?&query=music&filter=tag:guitar&weights=&page=3",
+    "results": [
+        {
+            "id": 541464,
+            "name": "Music: Molo-Ska",
+            "tags": [
+                "Guitar",
+                "Ska",
+                "Music",
+                "Rock"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Sheyvan"
+        },
+        {
+            "id": 658152,
+            "name": "Guitar Music",
+            "tags": [
+                "Guitar",
+                "Music",
+                "Recorded",
+                "Loop",
+                "Background"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 683265,
+            "name": "Horror Music",
+            "tags": [
+                "Creepie",
+                "Bass",
+                "Guitar",
+                "Zombie",
+                "Ambient",
+                "Horror",
+                "Loop",
+                "Drum",
+                "BGM",
+                "Music",
+                "Synth",
+                "Beat",
+                "Pad"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 586538,
+            "name": "Relaxing Music",
+            "tags": [
+                "Bongos",
+                "Background-Music",
+                "Relaxing",
+                "Percussions",
+                "Xylophone",
+                "Shaker",
+                "Guitar",
+                "Music",
+                "Tamborine",
+                "Acoustic",
+                "Upright-Bass"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 586838,
+            "name": "Background Music",
+            "tags": [
+                "guitar",
+                "percussions",
+                "background-music",
+                "music",
+                "shakers"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 567112,
+            "name": "Relaxing Music",
+            "tags": [
+                "guitar",
+                "shaker",
+                "bass",
+                "percussions",
+                "jazz",
+                "instrumental",
+                "congo",
+                "music",
+                "background",
+                "piano"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 639585,
+            "name": "The story you're about to hear... (music)",
+            "tags": [
+                "atmosphere",
+                "vst",
+                "intro",
+                "suspense",
+                "creepy",
+                "female",
+                "ambient",
+                "ambiant",
+                "film",
+                "anxious",
+                "slow",
+                "music",
+                "calm",
+                "ambience",
+                "bass",
+                "cinematic",
+                "dark",
+                "game",
+                "dramatic",
+                "background",
+                "resonant",
+                "guitar",
+                "thrill",
+                "vocal",
+                "bow",
+                "drama",
+                "ancient",
+                "reverb",
+                "strings"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "xkeril"
+        },
+        {
+            "id": 559847,
+            "name": "Guitar Music",
+            "tags": [
+                "Guitar",
+                "Music",
+                "Bass"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 559836,
+            "name": "Relaxing Music",
+            "tags": [
+                "Relaxing",
+                "Percussions",
+                "Soothing",
+                "Guitar",
+                "Band",
+                "Music"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 711960,
+            "name": "Relax music",
+            "tags": [
+                "Davejf",
+                "percs",
+                "drums",
+                "fx",
+                "relax",
+                "percussion-loop",
+                "improvised",
+                "guitar",
+                "music"
+            ],
+            "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+            "username": "DaveJf"
+        },
+        {
+            "id": 658151,
+            "name": "Emotional Guitar Music",
+            "tags": [
+                "Melancholic",
+                "Guitar",
+                "Music",
+                "Background",
+                "Emotional",
+                "Loop"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 559852,
+            "name": "Fun & Relaxing Piano Music",
+            "tags": [
+                "String",
+                "Relaxing",
+                "Guitar",
+                "Music",
+                "Fun",
+                "Violin",
+                "Piano",
+                "Loop"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 559835,
+            "name": "Sad Guitar Piano Music",
+            "tags": [
+                "Drama",
+                "Mood",
+                "Relax",
+                "Sad",
+                "Guitar",
+                "Music",
+                "Anime",
+                "Emotional",
+                "Piano"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 683270,
+            "name": "Emotional Mysterious Music",
+            "tags": [
+                "pad",
+                "orchestra",
+                "drama",
+                "emotional",
+                "atmosphere",
+                "bgm",
+                "ambient",
+                "guitar",
+                "loop",
+                "music"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        },
+        {
+            "id": 560480,
+            "name": "Choir Background Music",
+            "tags": [
+                "guitar",
+                "relax",
+                "choir",
+                "music",
+                "background",
+                "synth",
+                "meditation"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "username": "Migfus20"
+        }
+    ]
+}

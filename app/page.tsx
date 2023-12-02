@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import TonePlay from './components/TonePlay';
-import Sample from './components/Sample';
+import Image from "next/image";
+import Link from "next/link";
+import TonePlay from "./components/TonePlay";
+import Sample from "./components/Sample";
 
 export default function Home() {
   return (
@@ -10,21 +10,31 @@ export default function Home() {
         <h1 className="self-start text-xl font-bold">Tone Reactor</h1>
       </div>
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex pb-2 border-b-2 border-black">
-        <Link className="text-lg font-bold hover:text-gray-600" href="about">About</Link>
+        <Link className="text-lg font-bold hover:text-gray-600" href="about">
+          About
+        </Link>
         <TonePlay />
       </div>
       <div className="mt-4 mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
         <h2 className="pb-2">Can we get a random image to show up here?</h2>
-        <div className="grid grid-cols-3">
-          <Sample />
-          <Sample />
-          <Sample />
-        </div>
+        <ul className="grid grid-cols-3">
+          <li>
+            <Sample key="sample-1" />
+          </li>
+          <li>
+            <Sample key="sample-2" />
+          </li>
+          <li>
+            <Sample key="sample-3" />
+          </li>
+        </ul>
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
-        <h2 className="mt-8 pb-2">Here's an example of an image with remote src that shows up fine:</h2>
-        <Image 
-          className='lg:w-full'
+        <h2 className="mt-8 pb-2">
+          Here's an example of an image with remote src that shows up fine:
+        </h2>
+        <Image
+          className="lg:w-full"
           src="https://user-images.githubusercontent.com/19648700/284762217-de5b3c2a-108e-4f2f-b4d7-6f9b292c8d75.png"
           height={902}
           width={2096}
@@ -32,5 +42,5 @@ export default function Home() {
         />
       </div>
     </main>
-  )
+  );
 }
