@@ -3,9 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-async function getImageSrc() {
+async function getImageSrc(key: string) {
   // fetch the image blob from internal api route
-  const res = await fetch(`${window.location.origin}/random-image`, {
+  const internalRoute = new URL(`${window.location.origin}/random-image`);
+  internalRoute.search = new URLSearchParams({ tr_cacheref: key}).toString();
+  
+  const res = await fetch(internalRoute, {
     headers: {
       'Accept-type': 'image/jpeg',
     }
@@ -20,13 +23,17 @@ async function getImageSrc() {
   return await imageObjectURL;
 }
 
-function Sample() {
+type SampleProps = {
+  key: string;
+}
+
+function Sample({ key }: SampleProps) {
   const [imageSrc, setImageSrc] = useState(''); // TODO: fallback image
   useEffect(() => {
     (async function fetchRandomImage() {
-      setImageSrc(await getImageSrc());
+      setImageSrc(await getImageSrc(key));
     })();
-  },[])
+  },[key])
 
   console.log('====================================');
   console.log(imageSrc); // blob:http://localhost:3000/ea4ed1dc-ca1f-4f36-b6b5-a5ad28254166

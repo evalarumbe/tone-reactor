@@ -15,11 +15,11 @@ export default function Home() {
       </div>
       <div className="mt-4 mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
         <h2 className="pb-2">Can we get a random image to show up here?</h2>
-        <div className="grid grid-cols-3">
-          <Sample />
-          <Sample />
-          <Sample />
-        </div>
+        <ul className="grid grid-cols-3">
+          <li><Sample key="sample-1"/></li>
+          <li><Sample key="sample-2"/></li>
+          <li><Sample key="sample-3"/></li>
+        </ul>
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
         <h2 className="mt-8 pb-2">Here's an example of an image with remote src that shows up fine:</h2>
