@@ -29,8 +29,8 @@ function Sample() {
       // setImageSrc(await getImageSrc(id));
       setImageSrc(await getImageSrc());
     })();
-  // },[id])
-  },[])
+    // },[id])
+  }, [])
 
   return (
     <Image
