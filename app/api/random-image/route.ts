@@ -1,10 +1,8 @@
 import 'server-only';
-import { NextApiRequest } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 
 // export async function GET(req: NextApiRequest) {
 export async function GET(req: NextRequest) {
-  console.log(req);
   // console.log(req.query.id);
   
   // fetch a blob from external api
