@@ -19,5 +19,8 @@ export async function streamToBlob(stream: ReadableStream<Uint8Array>) {
     }
   }
 
-  return new Blob(chunks);
+  // TODO NEXT: What am I passing into this object? am i telling Blob what to expect because wav is defined elsewhere, or a i defining wav here for the first time? how does this relate to file type coming from freesound? am i also setting headers about what file type i expect in my local api route?
+  const blob = new Blob(chunks, { type: 'audio/wav; codecs=0' }); // TODO: try wav or mp3. (might also have to change the headers to receive the right format)
+
+  return blob; // blob:http://localhost:3000/8744e81a-f68a-4027-af7d-20d91da057d6
 }

@@ -23,7 +23,7 @@ async function getAudioSrc() {
   // const res = await fetch(`${window.location.origin}/api/random-audio/${id}`, {
   const res = await fetch(`${window.location.origin}/api/random-audio/`, {
     headers: {
-      'Accept-type': 'audio/wav', // TODO: mp3?
+      'Accept-type': 'audio/wav', // TODO: mp3? What is FreeSound sending me?
     }
   });
   let audioObjectURL = '';
@@ -47,15 +47,13 @@ function Sample() {
   
   useEffect(() => {
     (async () => {
-      // setImageSrc(await getImageSrc(imageId));
-      // setAudioSrc(await getAudioSrc(audioId));
+      // setImageSrc(await getImageSrc(imageId)); // TODO: later
+      // setAudioSrc(await getAudioSrc(audioId)); // TODO: later
       setImageSrc(await getImageSrc());
       setAudioSrc(await getAudioSrc());
     })();
     // },[imageId, audioId])
   }, [])
-
-  // TODO: Fetch the audio from FreeSound.org
 
   return (
     <>
@@ -67,8 +65,17 @@ function Sample() {
         height={400}
         alt=""
         />
-        <h1>{audioSrc}</h1>
-        <audio controls src={audioSrc}></audio> {/* UPCOMING TODO: Why don't I hear it? */}
+        {/* TODO: Why don't I hear it? */}
+        <audio controls src={audioSrc}></audio> {/* controls are disabled */}
+        <audio controls>
+          <source src={audioSrc} /> {/* default sound is playable (but source sound was expected) */}
+        </audio>
+        {/* I need to double check which type I should be expecting here. This is my best guess as to why it's broken. */}
+        <audio controls>
+          <source src={audioSrc} type="audio/wav" /> {/* default sound is playable (but source sound was expected) */}
+        </audio>
+        {/* Would we usually use a string with this format as the source? */}
+        <a href={audioSrc}>{audioSrc}</a> {/* blob:http://localhost:3000/16bf9fec-0784-422d-962b-cf25af591059 */}
     </>
   );
 }
