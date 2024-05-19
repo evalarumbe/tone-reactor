@@ -35,6 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - Could I make better use of ts.config? [4:56](https://youtu.be/b9IWYqhbHzg?si=1FWM9O3hOYnUMDJa&t=296)
 
 # Data sources
+
 - [freesound.org](https://freesound.org/docs/api/)
 - [Random Image API](https://api-ninjas.com/api/randomimage)
 - [JSON placeholder](https://jsonplaceholder.typicode.com/)
@@ -46,6 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 | `server-only `            | Security: Produce a build-time error if server-intended modules are accidentally running on the client. [Recommended in Next docs](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment). |
 
 # Troubleshooting
+
 - `Error: Cannot find module 'stream/web'`
   - Your version of Node is too old.
   - `nvm ls-remote --lts` to see the name of the latest available version
