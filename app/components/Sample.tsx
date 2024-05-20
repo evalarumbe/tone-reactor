@@ -30,7 +30,9 @@ async function getAccessTokenClientSide() {
 }
 
 async function getAudioSrcClientSide(soundId: Number) {
-  const res = await fetch(`http://www.freesound.org/apiv2/sounds/557976/`, { // TODO: use soundId
+  const soundEndpoint = `https://www.freesound.org/apiv2/sounds/${soundId}/`; // TODO: use soundId
+  const tempCorsProxy = 'http://localhost:8080/';
+  const res = await fetch(`${tempCorsProxy}${soundEndpoint}`, {
     headers: {
       'Authorization': `Token ${await getAccessTokenClientSide()}`,
     }
@@ -56,7 +58,6 @@ function Sample({ soundId }: SampleProps) {
     (async () => {
       setImageSrc(await getImageSrc());
       setAudioSrc(await getAudioSrcClientSide(soundId));
-      console.log(await getAudioSrcClientSide(soundId))
     })();
   }, [soundId])
 
@@ -70,14 +71,7 @@ function Sample({ soundId }: SampleProps) {
         height={400}
         alt=""
         />
-        {/* TODO: Why don't I hear it? */}
-        <audio controls src={audioSrc}></audio> {/* controls are disabled */}
-        <audio controls>
-          <source src={audioSrc} /> {/* default sound is playable (but source sound was expected) */}
-        </audio>
-        <audio controls>
-          <source src={audioSrc} type="audio/mp3" /> {/* default sound is playable (but source sound was expected) */}
-        </audio>
+        <audio controls src={audioSrc}></audio>
     </>
   );
 }

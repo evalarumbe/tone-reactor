@@ -46,6 +46,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 | :------------------------ | :------ |
 | `server-only `            | Security: Produce a build-time error if server-intended modules are accidentally running on the client. [Recommended in Next docs](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment). |
 
+## Run a CORS proxy locally alongside this project
+
+The fetch URLs in this app are given like so:
+
+```js
+const endpoint = 'https://some-api-service/data/';
+const proxy = 'localhost:8080/';
+
+fetch(`${proxy}${endpoint}`);
+```
+
+Here are the steps to recreate this CORS proxy locally:
+
+Clone the CORS Anywhere repository from GitHub: `git clone https://github.com/Rob--W/cors-anywhere.git`
+Navigate into the cloned directory: `cd cors-anywhere`
+Install the dependencies: `npm install`
+Start the server: `node server.js`
+
+This will start a CORS Anywhere server on your local machine, usually on port 8080.
+
+Alternatively, you may prefer to run your own CORS proxy (with the risk that entails), and update the proxy URL to point to your own server.
+
 # Troubleshooting
 
 - `Error: Cannot find module 'stream/web'`

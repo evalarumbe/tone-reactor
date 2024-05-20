@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Sample from './Sample';
 
 function Samples() {
-    const [soundIds, setAudioIds] = useState([557976, 557977, 557978]) // fallback IDs
+    const [soundIds, setSoundIds] = useState([557976, 557977, 557978]) // fallback IDs
     
     useEffect(() => {
-
+      // TODO: fetch 3 random sounds Ids
     }, []); // TODO: dependencies?
 
     return (
