@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import { getAccessTokenClientSide } from '../lib/data';
 import Image from 'next/image';
 
 // async function getImageSrc(id: string) {
@@ -21,15 +22,7 @@ async function getImageSrc() {
   }
 }
 
-async function getAccessTokenClientSide() {
-  const res = await fetch(`${window.location.origin}/api/freesound-access-token/`, {
-    headers: {
-      'Accept-type': 'text/plain;charset=UTF-8',
-    }});
-  return await res.text();
-}
-
-async function getAudioSrcClientSide(soundId: Number) {
+async function getAudioSrcClientSide(soundId: number) {
   const soundEndpoint = `https://www.freesound.org/apiv2/sounds/${soundId}/`; // TODO: use soundId
   const tempCorsProxy = 'http://localhost:8080/';
   const res = await fetch(`${tempCorsProxy}${soundEndpoint}`, {

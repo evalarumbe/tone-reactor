@@ -3,6 +3,14 @@ export function fetchLocalRoute(endpoint: string) {
   // maybe this func accepts another request, and uses that req to make a new req to the backend, then returns the response that this func gets from the back.
 }
 
+export async function getAccessTokenClientSide() {
+  const res = await fetch(`${window.location.origin}/api/freesound-access-token/`, {
+    headers: {
+      'Accept-type': 'text/plain;charset=UTF-8',
+    }});
+  return await res.text();
+}
+
 /**
  * Take a ReadableStream, such as those returned by freesound.org
  * Return a Blob (as a Promise), to be consumed by <audio>
