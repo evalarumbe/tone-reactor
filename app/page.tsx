@@ -16,7 +16,6 @@ export default function Home() {
         <TonePlay />
       </div>
       <div className="mt-4 mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
-        <h2 className="pb-2">Can we get a random image to show up here?</h2>
         <Samples />
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
