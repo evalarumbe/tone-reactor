@@ -9,8 +9,8 @@ type SampleProps = {
   soundId: number;
 }
 
-// async function getImageSrc(id: string) {
-async function getImageSrc() {
+// async function getImageSrc(id: string): Promise<string> {
+async function getImageSrc(): Promise<string> {
   // fetch the image blob from internal api route
   const res: Response = await fetch(`${window.location.origin}/api/random-image/`, {
     headers: {
@@ -27,7 +27,7 @@ async function getImageSrc() {
   }
 }
 
-async function getAudioSrcClientSide(soundId: number) {
+async function getAudioSrcClientSide(soundId: number): Promise<string> {
   const soundEndpoint: string = `https://www.freesound.org/apiv2/sounds/${soundId}/`;
   const tempCorsProxy: string = 'http://localhost:8080/';
   const res: Response = await fetch(`${tempCorsProxy}${soundEndpoint}`, {
@@ -44,7 +44,7 @@ async function getAudioSrcClientSide(soundId: number) {
   }
 }
 
-function Sample({ soundId }: SampleProps) {
+function Sample({ soundId }: SampleProps): JSX.Element {
   const [imageSrc, setImageSrc] = useState<string>(
     'https://user-images.githubusercontent.com/19648700/284762217-de5b3c2a-108e-4f2f-b4d7-6f9b292c8d75.png' // TODO: set fallback image
   );

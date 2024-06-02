@@ -32,7 +32,7 @@ async function getSoundIds(): Promise<number[]> {
   }
 }
 
-function Samples () {
+function Samples (): JSX.Element {
     const [soundIds, setSoundIds] = useState<number[]>(
       [557976, 557977, 557978] // fallback IDs
     )
