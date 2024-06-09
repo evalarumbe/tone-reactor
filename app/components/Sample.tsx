@@ -5,21 +5,21 @@ import { getAccessTokenClientSide } from '../lib/data';
 import { Sound } from '../vendor-types/freesound';
 import Image from 'next/image';
 
-type SampleProps = {
+interface SampleProps {
   soundId: number;
 }
 
 // async function getImageSrc(id: string): Promise<string> {
 async function getImageSrc(): Promise<string> {
   // fetch the image blob from internal api route
-  const res: Response = await fetch(`${window.location.origin}/api/random-image/`, {
+  const res = await fetch(`${window.location.origin}/api/random-image/`, {
     headers: {
       'Accept-type': 'image/jpeg',
     }
   });
   if (res.ok) {
-    const imageBlob: Blob = await res.blob();
-    const imageObjectURL: string = await URL.createObjectURL(imageBlob);
+    const imageBlob = await res.blob();
+    const imageObjectURL = await URL.createObjectURL(imageBlob);
     return await imageObjectURL;
   }
   else {
@@ -28,23 +28,23 @@ async function getImageSrc(): Promise<string> {
 }
 
 async function getAudioSrcClientSide(soundId: number): Promise<string> {
-  const soundEndpoint: string = `https://www.freesound.org/apiv2/sounds/${soundId}/`;
-  const tempCorsProxy: string = 'http://localhost:8080/';
-  const res: Response = await fetch(`${tempCorsProxy}${soundEndpoint}`, {
+  const soundEndpoint = `https://www.freesound.org/apiv2/sounds/${soundId}/`;
+  const tempCorsProxy = 'http://localhost:8080/';
+  const res = await fetch(`${tempCorsProxy}${soundEndpoint}`, {
     headers: {
       'Authorization': `Token ${await getAccessTokenClientSide()}`,
     }
   });
   if (res.ok) {
     const json: Sound = await res.json();
-    const audioSrc: string = json['previews']['preview-lq-mp3'];
+    const audioSrc = json['previews']['preview-lq-mp3'];
     return audioSrc;
   } else {
     throw new Error(`Could not fetch sound. Response: ${JSON.stringify(res)}`)
   }
 }
 
-function Sample({ soundId }: SampleProps): JSX.Element {
+function Sample({ soundId }: SampleProps) {
   const [imageSrc, setImageSrc] = useState<string>(
     'https://user-images.githubusercontent.com/19648700/284762217-de5b3c2a-108e-4f2f-b4d7-6f9b292c8d75.png' // TODO: set fallback image
   );

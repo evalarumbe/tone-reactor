@@ -1,11 +1,11 @@
-export type SoundList = {
+export interface SoundList {
   count: number
   previous: any // unknown sometimes null
   next: string
   results: Array<SoundListItem>
 }
 
-export type SoundListItem = {
+export interface SoundListItem {
   id: number
   name: string
   tags: Array<string>
@@ -13,7 +13,7 @@ export type SoundListItem = {
   username: string
 }
 
-export type Sound = {
+export interface Sound {
   id: number
   url: string
   name: string

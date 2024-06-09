@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { SoundList } from '../../vendor-types/freesound';
 
 export async function GET(request: Request): Promise<NextResponse> {
-  const res: Response = await fetch('https://freesound.org/apiv2/search/text/?' + new URLSearchParams({
+  const res = await fetch('https://freesound.org/apiv2/search/text/?' + new URLSearchParams({
     query: 'music',
     previews: '', // Docs say this is how to download sounds with basic Token auth
   }), {

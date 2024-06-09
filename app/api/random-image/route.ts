@@ -6,7 +6,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   // console.log(req.query.id);
   
   // fetch a blob from external api
-  const response: Response = await fetch(
+  const response = await fetch(
     `https://api.api-ninjas.com/v1/randomimage?category=abstract&trCacheref=${Date.now()}`,
     {
       headers: {
@@ -15,7 +15,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
       },
     }
   );
-  const imageBlob: Blob = await response.blob();
+  const imageBlob = await response.blob();
 
   // return the blob to the caller in the response
   const res = new NextResponse(imageBlob, {

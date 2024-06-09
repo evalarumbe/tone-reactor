@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { getAccessTokenClientSide } from '../lib/data';
-import { SoundList, SoundListItem, Sound } from '../vendor-types/freesound';
+import { SoundList, SoundListItem } from '../vendor-types/freesound';
 import Sample from './Sample';
 
 async function getSoundIds(): Promise<number[]> {
 
-  const soundsEndpoint: string = 'https://freesound.org/apiv2/search/text/?query=music';
-  const tempCorsProxy: string = 'http://localhost:8080/';
-  const res: Response = await fetch(`${tempCorsProxy}${soundsEndpoint}`, {
+  const soundsEndpoint = 'https://freesound.org/apiv2/search/text/?query=music';
+  const tempCorsProxy = 'http://localhost:8080/';
+  const res = await fetch(`${tempCorsProxy}${soundsEndpoint}`, {
     headers: {
       'Authorization': `Token ${await getAccessTokenClientSide()}`
     }
@@ -21,8 +21,8 @@ async function getSoundIds(): Promise<number[]> {
     const results: SoundListItem[] = json.results;
     
     // Our app needs 3 samples
-    for (let i: number = 0; i < 3; i++) {
-      const randomIndex: number = Math.floor(Math.random() * results.length);
+    for (let i = 0; i < 3; i++) {
+      const randomIndex = Math.floor(Math.random() * results.length);
       fetchedSoundIds.push(results[randomIndex].id);
     }
 
@@ -32,11 +32,9 @@ async function getSoundIds(): Promise<number[]> {
   }
 }
 
-function Samples (): JSX.Element {
-    const [soundIds, setSoundIds] = useState<number[]>(
-      [557976, 557977, 557978] // fallback IDs
-    )
-    
+function Samples () {
+    const [soundIds, setSoundIds] = useState([557976, 557977, 557978]); // fallback IDs
+
     useEffect(() => {
       (async () => {
         setSoundIds(await getSoundIds());
