@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import TonePlay from './components/TonePlay';
 import Samples from './components/Samples';
+import ToggleMute from './components/ToggleMute';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </div>
       <div className="mt-4 mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
         <Samples />
+        <ToggleMute />
       </div>
       <div className="mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
         <h2 className="mt-8 pb-2">

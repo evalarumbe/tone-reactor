@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { getAccessTokenClientSide } from '../lib/data';
+import { toggleAudioOn } from '../lib/tone';
 import { Sound } from '../vendor-types/freesound';
 import Image from 'next/image';
 
@@ -59,8 +60,12 @@ function Sample({ soundId }: SampleProps) {
     })();
   }, [soundId])
 
+  function handleToggleAudio(audioSrc: string): void {
+    toggleAudioOn(audioSrc);
+  }
+
   return (
-    <>
+    <button onClick={(): void => handleToggleAudio(audioSrc)}>
       <Image
         priority
         className="lg:h-full aspect-auto"
@@ -69,8 +74,8 @@ function Sample({ soundId }: SampleProps) {
         height={400}
         alt=""
         />
-        <audio controls src={audioSrc}></audio>
-    </>
+        {/* <audio controls src={audioSrc}></audio> */}
+    </button>
   );
 }
 
