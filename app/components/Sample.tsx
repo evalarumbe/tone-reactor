@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { getAccessTokenClientSide } from '../lib/data';
@@ -6,7 +6,7 @@ import { Sound } from '../vendor-types/freesound';
 import Image from 'next/image';
 
 interface SampleProps {
-  soundId: number;
+  soundId: number,
 }
 
 // async function getImageSrc(id: string): Promise<string> {
